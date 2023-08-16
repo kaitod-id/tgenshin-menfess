@@ -1,6 +1,10 @@
 import os
 
 
+def get_user_link(user_id):
+    return f"[Traveler](tg://user?id={user_id})"
+
+
 def get_traveler_name(user):
     if user.username:
         return f"@{user.username}"
@@ -13,13 +17,7 @@ def get_traveler_name(user):
 __TEYVAT = f"[Teyvat](t.me/{os.getenv('CHANNEL_USERNAME')})"
 __RULES = """- Akun Telegram {_TRV} harus follow {_TVT} dulu ya, ehe~.
 - Akun Telegram {_TRV} harus memiliki username dan foto profil.
-- Pesan {_TRV} harus berjumlah minimal 20 karakter dan 5 kata.
-
-- Pakai hastag 
-#rpconfess  #rpmenfess  #rpmfs
-#rpcurhat  #rprandom  #rpnanyea
-#rpgalau  #rpgamon  #rpgabut
-#rphates  #rpjokes.""".format(_TRV=get_user_link("{user_id}"), _TVT=__TEYVAT)
+- Pesan {_TRV} harus berjumlah minimal 20 karakter dan 5 kata.""".format(_TRV=get_traveler_name, _TVT=__TEYVAT)
 
 
 ON_START_MSG = """
