@@ -23,7 +23,7 @@ Aku adalah bot untuk membawa pesan kamu ke alam {_TVT},
 
 
 ON_HOWTO_CB = """
-{_TRV} tinggal ketik apapun yang {_TRV} mau yang berhubungan dengan Genshin Impact ya {_TRV}, tetapi
+{_TRV} tinggal ketik apapun yang kamu mau  ya {_TRV}, tetapi
 pesan {_TRV} akan terkirim jika pesan {_TRV} memenuhi syarat di bawah ini:
 
 {_RULE}
