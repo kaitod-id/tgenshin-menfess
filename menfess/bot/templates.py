@@ -1,30 +1,15 @@
 import os
 
 
-def get_user_link(user_id):
-    return f"[Traveler](tg://user?id={user_id})"
+import os
 
 
-def get_traveler_name(user):
-    if user.username:
-        return f"@{user.username}"
-    elif user.first_name:
-        return user.import os
-
-
-def get_user_name(user):
-    if user.first_name:
-        if user.last_name:
-            return f"[{user.first_name} {user.last_name}](tg://user?id={{user.id}})"
-        return f"[{user.first_name}](tg://user?id={{user.id}})"
-    return f"[{user.username}](tg://user?id={{user.id}})" if user.username else "Pengguna"
-
-user_id = "<nama_pengguna>"  # Ganti dengan nilai yang sesuai
-__TRAVELER = f"{get_user_name(user)}"
+__TRAVELER = "[Kamu](tg://user?id={user_id})"
 __TEYVAT = f"[Teyvat](t.me/{os.getenv('CHANNEL_USERNAME')})"
 __RULES = """- Akun Telegram {_TRV} harus follow {_TVT} dulu ya, ehe~.
 - Akun Telegram {_TRV} harus memiliki username dan foto profil.
 - Pesan {_TRV} harus berjumlah minimal 20 karakter dan 5 kata.""".format(_TRV=__TRAVELER, _TVT=__TEYVAT)
+
 
 
 ON_START_MSG = """
