@@ -41,9 +41,17 @@ async def valid_only_flt(_, c: GenshinMF, m: Message):
     ch_usn = os.getenv("CHANNEL_USERNAME")
     mem_ids = [mem.user.id async for mem in c.get_chat_members(ch_usn)]
 
+    hashtags = [
+        "#rpconfess", "#rpmenfess", "#rpmfs",
+        "#rpcurhat", "#rprandom", "#rpnanyea",
+        "#rpgalau", "#rpgamon", "#rpgabut",
+        "#rphates", "#rpjokes"
+    ]
+
     if (
         len(m.text.split()) >= 5 and len(m.text) >= 20 and bool(user.photo) and
-        bool(user.username) and user.id in mem_ids
+        bool(user.username) and user.id in mem_ids and
+        any(hashtag in m.text for hashtag in hashtags)
     ):
         return True
 
@@ -51,11 +59,3 @@ async def valid_only_flt(_, c: GenshinMF, m: Message):
     return False
 
 valid_only = create(valid_only_flt)
-
-# Hashtags added
-hashtags = [
-    "#rpconfess", "#rpmenfess", "#rpmfs",
-    "#rpcurhat", "#rprandom", "#rpnanyea",
-    "#rpgalau", "#rpgamon", "#rpgabut",
-    "#rphates", "#rpjokes"
-]
