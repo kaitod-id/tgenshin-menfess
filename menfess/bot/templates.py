@@ -62,5 +62,5 @@ Yah, pesan {_TRV} belum memenuhi kriteria di bawah ini:
 
 {_RULE}
 
-Jadi Paimon gabisa mengirim pesan {_TRV}, hiks.
+Jadi Kamu gabisa mengirim pesan {_TRV}, hiks.
 """.format(_TRV=__TRAVELER, _TVT=__TEYVAT, _RULE=__RULES)
